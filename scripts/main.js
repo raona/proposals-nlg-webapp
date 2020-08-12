@@ -7,6 +7,10 @@ $(document).ready(() => {
     $('#exampleText').keyup(delay(function (e) {
         textPredictor.predictText();
     }, 500));
+
+    $('#copyText').click(function () {
+        textPredictor.copyTextToInput();
+    })
 })
 
 function delay(callback, ms) {
@@ -84,6 +88,10 @@ textPredictor = {
             return textPredictor.defaultTopP;
         }
         return number;
+    },
+    copyTextToInput: () => {
+        let text = $('#outputText').text();
+        $('#exampleText').val(text);
     }
 
 }
