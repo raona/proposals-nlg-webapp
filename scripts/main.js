@@ -10,6 +10,7 @@ $(document).ready(() => {
 
     $('#copyText').click(function () {
         textPredictor.copyTextToInput();
+        textPredictor.predictText();
     })
 })
 
@@ -25,7 +26,7 @@ function delay(callback, ms) {
 }
 
 textPredictor = {
-    url: "http://20.54.49.227:80/generate",
+    url: "https://proposals-nlp-functions.azurewebsites.net/api/CallGenerateOverHttp?code=RAMbr1oYNhalvjQTk0T53LJBp9Uls8pzkh%2F4czlqzKIwYvbaNdzjgg%3D%3D",
     defaultMaxWords: 10,
     defaultTopP: 0.6,
     predictText: () => {
