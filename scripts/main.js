@@ -22,8 +22,8 @@ function delay(callback, ms) {
 
 textPredictor = {
     url: "http://20.54.49.227:80/generate",
-    defaultMaxWords: 5,
-    defaultTopP: 0.0,
+    defaultMaxWords: 10,
+    defaultTopP: 0.6,
     predictText: () => {
         let data = textPredictor.prepareData();
         if (data.text == '') {
