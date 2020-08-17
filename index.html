@@ -24,33 +24,48 @@
             crossorigin="anonymous"></script>
     <script src="scripts/main.js"></script>
 
-    <title>Text-predictor</title>
+    <title>proposals-nlg</title>
 </head>
 
 <body>
     <div class="container">
         <br/>
-        <h3>Raona - Proposals Natural Language Generator <i>(beta 1.0)</i></h3>
+        <h1>Proposals Natural Language Generator <i>(beta 1.0)</i></h1>
         <form>
             <div class="form-group">
-                <label for="exampleText">Text</label>
-                <input type="text" class="form-control" id="exampleText"
+                <label for="explanation"><b>Proposals-NLG</b> es un sistema de generación de texto mediante Inteligencia Artificial basado en un modelo tipo <i>Massive Deep Learning</i>, parecido a otros de mercado como el famoso GPT-3 de OpenAI o Turing-NLG de Microsoft.</label>
+                <label>La particularidad de éste modelo es que ha aprendido de documentos propios elaborados por Raona, dentro del marco semántico y cognitivo de las propuestas de proyecto. Eso quiere decir que <i>"entiende"</i> el vocabulario y la forma del tipo de documentos con los que se le ha enseñado, y que es capaz de aplicar diferentes técnicas del lenguage natural sobre este ámbito. En éste caso, vamos a aplicar la generación de texto.</label>
+                <label>Para ver el algoritmo en acción, basta con introducir las primeras palabras de la frase en el campo de texto marcado como <i>Input</i>. El texto generado aparecerá a continuación en el campo <i>Output</i>. Mediante el botón <i>Continue ...</i> vamos a poder seguir generando nuevo texto a partir de la salida generada.</label>
+                <div style="margin-top: 20px;">
+                    <label>Algunos ejemplos:</label>
+                    <li><i>"En Raona"</i></li>
+                    <li><i>"Nuestras intranets"</i></li>
+                    <li><i>"La plataforma SharePoint Online"</i></li>
+                </div>
+            </div>
+            <br/>
+            <div class="form-group">
+                <label for="exampleText"><i>Input</i></label>
+                <textarea class="form-control" id="exampleText"
                        aria-describedby="exampleTextHelp" style="height:120px; vertical-align: top;"
-                       placeholder="Enter text">
+                       placeholder="Enter text"></textarea>
             </div>
             <div class="form-group">
-                <label for="outputText">Output</label>
+                <label for="outputText"><i>Output</i></label>
                 <span class="form-control" id="outputText"
                       style="height: auto; min-height: 40px;"></span>
-                <button type="button" id="copyText" class="btn btn-outline-primary mt-2">Copy text to Input</button>
+                <button type="button" id="copyText" class="btn btn-outline-primary mt-2">Continue ...</button>
             </div>
+            <br/>
+            <br/>
+            <h3>Parameters</h3>
             <div class="row">
                 <div class="col">
-                    <label for="maxWordsInput">Max. Words</label>
+                    <label for="maxWordsInput"><i>Max. Words</i></label>
                     <input type="number" id="maxWordsInput" class="form-control">
                 </div>
                 <div class="col">
-                    <label for="topPInput">Top_p</label>
+                    <label for="topPInput"><i>Top_p</i></label>
                     <input type="number" id="topPInput" step="0.1" class="form-control">
                 </div>
             </div>
