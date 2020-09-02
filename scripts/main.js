@@ -12,6 +12,10 @@ $(document).ready(() => {
         textPredictor.copyTextToInput();
         textPredictor.predictText();
     })
+
+    $('#rerun').click(function () {
+        textPredictor.predictText();
+    })
 })
 
 function delay(callback, ms) {
